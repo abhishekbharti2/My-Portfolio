@@ -59,7 +59,9 @@
   text-shadow: 1px 1px 1px black;
   -webkit-user-select: none;
 }
-
+.site-title>h1{
+  color: white;
+}
 .site-title>h1>span {
   color: var(--web-color);
 }

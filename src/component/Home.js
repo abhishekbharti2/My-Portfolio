@@ -1,19 +1,94 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css'
 export default function Home() {
-
+    const [project, setProject] = useState('Start Project');
     return (
 
         <div className="home-container">
             <img className='setBg-img' src="https://th.bing.com/th/id/OIP.msjyJvFoaSjaDj-QKTmfkQAAAA?rs=1&pid=ImgDetMain" alt="imm" />
+            <input type="checkbox" name="checkk" id="check-project" />
+            <div className="start-project">
+                <div className='form-in'>
+                    <div className="some-info">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Expect Time</th>
+                                    <th>Low ₹</th>
+                                    <th>Mid ₹</th>
+                                    <th>High ₹</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Web Dev</td>
+                                    <td>3-7 days</td>
+                                    <td>500 – 1,500</td>
+                                    <td>2,000 – 5,000</td>
+                                    <td>6,000 – 10,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Web Design</td>
+                                    <td>1-5 days</td>
+                                    <td>300 – 700</td>
+                                    <td>1,000 – 2,000</td>
+                                    <td>2,500 – 5,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Poster Design</td>
+                                    <td>2-6 hours</td>
+                                    <td>50 – 100</td>
+                                    <td>150 – 300</td>
+                                    <td>500 – 1,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Logo Design</td>
+                                    <td>30 min – 2 hours</td>
+                                    <td>100 – 250</td>
+                                    <td>500 – 1,000</td>
+                                    <td>1,200 – 2,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Content Writing</td>
+                                    <td>20 min – 2 hours</td>
+                                    <td>50 – 150</td>
+                                    <td>200 – 500</td>
+                                    <td>600 – 1,200</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>Go for <span style={{color:'skyblue'}} >{project}</span></h3>
+                    </div>
+                    <form action="">
+                        <input type="text" placeholder='Enter Name' />
+                        <input type="email" name="gmail" id="" placeholder='Enter Gmail' />
+                        <input type="number" name="number" id="" placeholder='Mobile Number' />
+                        <div className="file-date">
+                            <input type="file" name="" id="" />
+                            <input type="datetime-local" name="" id="" />
+                        </div>
+                        <textarea name="" id="" placeholder='Write Specification'></textarea>
+                        <button type='submit' className='card-btn' style={{ width: '80%' }}>Submit</button>
+                    </form>
+                    <label htmlFor="check-project" className='label-in'>&#x2718;</label>
+                </div>
+            </div>
             <div className="first-cont" id='Intro-Section' >
                 <div className="left-cont">
                     <span>We make beautiful websites for all people.</span>
                     <div>
-                        <button>Start Project</button>
-                        <p> Call Us at +91 8602175875 <br />
-                            <h6>for any inquiry</h6>
+                        <p style={{ color: 'wheat' }} > Call Us at +91 8602175875 <br />
+                            <h6 style={{ color: 'inherit' }} >for any inquiry</h6>
                         </p>
+                        <div className="select-cont"> <select name="select" onChange={(v) => { setProject(v.target.value) }} >
+                            <option value="Not Selected" style={{ backgroundColor: 'grey' }}>Start Project</option>
+                            <option value="WebSite Develop">WebDev</option>
+                            <option value="Poster Design">Poster Design</option>
+                            <option value="Logo Design">Logo Design</option>
+                            <option value="Content Writing">Content Writing</option>
+                        </select>
+                            <label htmlFor="check-project" className='label-go'>Go</label></div>
                     </div>
                     <div className="social-media">
                         <span>Social Media Handles</span>
@@ -42,9 +117,14 @@ export default function Home() {
                 <div className="sec-mid">
                     <strong style={{ color: 'black' }}>Services We Provide</strong>
                     <div className="mid-1">
-                        <strong style={{ color: 'black' }}>Website Developement
+                        <strong style={{ color: 'black' }}>Develop a WebSite
                             <span>98%</span></strong>
                         <span style={{ width: '98%' }}></span>
+                    </div>
+                    <div className="mid-1">
+                        <strong style={{ color: 'black' }}>Web Design
+                            <span>87%</span></strong>
+                        <span style={{ width: '87%' }}></span>
                     </div>
                     <div className="mid-1">
                         <strong style={{ color: 'black' }}>Poster Design
@@ -105,7 +185,9 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <div className="fourth-cont">
 
+            </div>
         </div>
 
     );
