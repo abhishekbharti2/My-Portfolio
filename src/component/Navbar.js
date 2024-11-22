@@ -47,7 +47,7 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="/askus" className="navbar-link">
+            <a href="https://bhartiabhi.netlify.app" className="navbar-link">
               Contact Us
             </a>
           </li>

@@ -105,6 +105,8 @@ tr:nth-child(even) {
 .label-go {
     border-radius: 0px 20px 20px 0px;
     font-size: 14px;
+    padding: 5px 10px;
+    background-color: rgb(210, 161, 255);
 }
 
 .label-in {
@@ -169,7 +171,12 @@ tr:nth-child(even) {
     width: 50%;
     padding: 20px 0px;
 }
-
+form>i{
+    font-size: 13px;
+    color: red;
+    text-align: center;
+    text-wrap: wrap;
+}
 .form-in>form>input,
 .file-date {
     background: none;
@@ -185,7 +192,11 @@ tr:nth-child(even) {
     width: 80%;
     height: 40%;
 }
-
+.file-date{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
 .file-date>input {
     padding: 2px;
     cursor: pointer;
@@ -193,6 +204,7 @@ tr:nth-child(even) {
     border: none;
     width: 45%;
     outline: none;
+    background-color: white;
 }
 
 #check-project:checked~.start-project {

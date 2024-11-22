@@ -58,17 +58,19 @@ export default function Home() {
                                 </tr>
                             </tbody>
                         </table>
-                        <h3>Go for <span style={{color:'skyblue'}} >{project}</span></h3>
+                        <h3>Service Type <span style={{ color: 'skyblue' }} >{project}</span></h3>
                     </div>
-                    <form action="">
-                        <input type="text" placeholder='Enter Name' />
-                        <input type="email" name="gmail" id="" placeholder='Enter Gmail' />
-                        <input type="number" name="number" id="" placeholder='Mobile Number' />
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <i>Name*, Gmail*, Mob*, Deadline*, Specifications*</i>
+                        <input type="hidden" name="access_key" value="487b169d-1360-4354-8f44-1e908b73e1cc" />
+                        <input type="text" name='Client Name' placeholder='Enter Name' required/>
+                        <input type="email" name="Gmail ID" placeholder='Enter Gmail' required />
+                        <input type="number" name="Mobile Number" id="" placeholder='Mobile Number' required />
                         <div className="file-date">
-                            <input type="file" name="" id="" />
-                            <input type="datetime-local" name="" id="" />
+                            <input type="datetime-local" name="Deadline" required/>
+                            <input type="text" name="Service" value={project} disabled/>
                         </div>
-                        <textarea name="" id="" placeholder='Write Specification'></textarea>
+                        <textarea name="Message" placeholder='Write Specification' required/>
                         <button type='submit' className='card-btn' style={{ width: '80%' }}>Submit</button>
                     </form>
                     <label htmlFor="check-project" className='label-in'>&#x2718;</label>
@@ -149,38 +151,38 @@ export default function Home() {
             <h1 id='Work-Section'>Our Work</h1>
             <div className="third-cont" >
                 <div className="work-cards">
-                    <img src="https://th.bing.com/th/id/R.3e6af51e02c09ededd33d8a118685cf8?rik=cuy60A%2bJOOmkOA&riu=http%3a%2f%2fthermajohn.com%2fcdn%2fshop%2farticles%2fAdobeStock_101366392_Blog_Post_1200x1200.jpg%3fv%3d1600791992&ehk=y9YAlqUka2lET8k3eucCvIdGH2S8Ftf4ICobMAtDSSM%3d&risl=&pid=ImgRaw&r=0" alt=" " />
+                    <img src="https://www.wallpaperflare.com/static/41/322/454/space-space-shuttle-white-spacecraft-wallpaper.jpg" alt=" " />
                     <div className="card-content">
                         <span className='fa fa-clock-o' > November 22, 2024</span>
-                        <a href='/' >This is Title of the Content</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href='https://verse-ex.netlify.app' >Verse-Ex</a>
+                        <p>It is a Space Exploration Website made for Education Purpose</p>
                         <button className='card-btn'>View Details</button>
                     </div>
                 </div>
                 <div className="work-cards">
-                    <img src="https://img.freepik.com/premium-photo/beautiful-girl-white-background_902994-438.jpg" alt=" " />
+                    <img src="https://setalmaa.com/wp-content/uploads/e-commerce.jpg" alt=" " />
                     <div className="card-content">
                         <span className='fa fa-clock-o' > November 22, 2024</span>
-                        <a href='/' >This is Title of the Content</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href='https://ejoyr.netlify.app' >Ejoyr</a>
+                        <p>It is an E. Commerce Website made for Business Purpose</p>
                         <button className='card-btn'>View Details</button>
                     </div>
                 </div>
                 <div className="work-cards">
-                    <img src="https://img.freepik.com/premium-photo/young-woman_948023-1111.jpg" alt=" " />
+                    <img src="https://3.bp.blogspot.com/-1OrTFTRXYAc/V-dyae4LC1I/AAAAAAAA5j4/awVKBuYhgLshSzNQm3l92HUnYvpsrbO6wCLcB/s1600/Forecasts.jpg" alt=" " />
                     <div className="card-content">
                         <span className='fa fa-clock-o' > November 22, 2024</span>
-                        <a href='/' >This is Title of the Content</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href='https://city-weathernow.netlify.app' >Weather App</a>
+                        <p>A Weather application made for get real time data of the weather</p>
                         <button className='card-btn'>View Details</button>
                     </div>
                 </div>
                 <div className="work-cards">
-                    <img src="https://s1.1zoom.me/b5050/637/Hair_Blonde_girl_White_background_Beautiful_530576_3840x2400.jpg" alt=" " />
+                    <img src="https://www.wisediy.com/wp-content/uploads/sites/781/2015/11/Screen-Shot-2015-11-27-at-2.52.44-PM.png" alt=" " />
                     <div className="card-content">
                         <span className='fa fa-clock-o' > November 22, 2024</span>
-                        <a href='/' >This is Title of the Content</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href='https://ejoyr-tic-tac-toe.netlify.app' >Tic-Tac-Toe</a>
+                        <p>Tic-Tac-Toe, it is a game application for local players</p>
                         <button className='card-btn'>View Details</button>
                     </div>
                 </div>
