@@ -68,7 +68,7 @@ export default function Home() {
                         <input type="number" name="Mobile Number" id="" placeholder='Mobile Number' required />
                         <div className="file-date">
                             <input type="datetime-local" name="Deadline" required/>
-                            <input type="text" name="Service" value={project} disabled/>
+                            <input type="text" name="Service" value={project}/>
                         </div>
                         <textarea name="Message" placeholder='Write Specification' required/>
                         <button type='submit' className='card-btn' style={{ width: '80%' }}>Submit</button>
