@@ -6,7 +6,7 @@ export default function Footer() {
       <footer className='web-footer'>
         <div className='footer-div-1'>
           <div className='footer-div1-el'>
-            <h4 className='footer-headings'>WEB-XER</h4> <br />
+            <h4 className='footer-headings'>DO IN BINARY</h4> <br />
             <p className='footer-paragraph'>
               Creative and Engaging Designs <br />
               Modern Technologies <br />
@@ -36,7 +36,7 @@ export default function Footer() {
             className="fa fa-instagram"> </a>
           <a href="https://youtube.com" className="fa fa-youtube"> </a>
         </div>
-        <p className='copyright-p'>&copy; www.web-xer.in || All Right Reserved</p><br />
+        <p className='copyright-p'>&copy; www.doinbinary.rf.gd || All Right Reserved</p><br />
       </footer>
     </>
   );

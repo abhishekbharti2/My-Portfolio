@@ -58,7 +58,7 @@ export default function Home() {
                                 </tr>
                             </tbody>
                         </table>
-                        <h3>Service Type <span style={{ color: 'skyblue' }} >{project}</span></h3>
+                        <h3>Service Type <span style={{ color: 'black' }} >{project}</span></h3>
                     </div>
                     <form action="https://api.web3forms.com/submit" method="POST">
                         <i>Name*, Gmail*, Mob*, Deadline*, Specifications*</i>
@@ -68,7 +68,7 @@ export default function Home() {
                         <input type="number" name="Mobile Number" id="" placeholder='Mobile Number' required />
                         <div className="file-date">
                             <input type="datetime-local" name="Deadline" required/>
-                            <input type="text" name="Service" value={project} disabled/>
+                            <input type="text" name="Service" value={project}/>
                         </div>
                         <textarea name="Message" placeholder='Write Specification' required/>
                         <button type='submit' className='card-btn' style={{ width: '80%' }}>Submit</button>
@@ -84,7 +84,7 @@ export default function Home() {
                             <h6 style={{ color: 'inherit' }} >for any inquiry</h6>
                         </p>
                         <div className="select-cont"> <select name="select" onChange={(v) => { setProject(v.target.value) }} >
-                            <option value="Not Selected" style={{ backgroundColor: 'grey' }}>Start Project</option>
+                            <option value="Not Selected" disabled>Start Project</option>
                             <option value="WebSite Develop">WebDev</option>
                             <option value="Poster Design">Poster Design</option>
                             <option value="Logo Design">Logo Design</option>
@@ -109,7 +109,7 @@ export default function Home() {
                 <div className="sec-left">
                     <h2>Let Us Introduce</h2>
                     <p>
-                        Welcome to &nbsp; <strong style={{ color: 'var(--web-color)', opacity: '80%' }}> WebXer, </strong> your one-stop destination for innovative web development and creative design solutions.
+                        Welcome to &nbsp; <strong style={{ color: 'var(--web-color)', opacity: '80%' }}> DoInBinary, </strong> your one-stop destination for innovative web development and creative design solutions.
                         <br />
                         We specialize in crafting dynamic, responsive, and user-friendly websites. Whether it’s building sleek frontends with React or traditional HTML/CSS/JavaScript, or powering robust backends, we ensure seamless functionality tailored to your needs.
                         <br />

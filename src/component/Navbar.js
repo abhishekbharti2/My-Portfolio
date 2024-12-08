@@ -27,7 +27,7 @@ export default function Navbar() {
 
         <div className="site-title">
           <h1>
-            Web-<span>Xer</span>
+            DoIn<span>Binary</span>
           </h1>
         </div>
         <ul className="link-container">
@@ -47,13 +47,12 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="https://bhartiabhi.netlify.app" className="navbar-link">
-              Contact Us
-            </a>
+           <a href="/" className="navbar-link" >About</a>
           </li>
            <li>
-               <a href='/' className='navbar-link'>
-               Join Us </a>
+           <a href="https://bhartiabhi.netlify.app" className="navbar-link">
+              Contact Us
+            </a>
            </li>
         </ul> 
 
