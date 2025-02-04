@@ -11,8 +11,8 @@ export default function Projects() {
                     <div key={index} className="Project-card">
                         <img src={Project.images} alt={Project.title} className="Project-image" />
                         <div className="Project-info">
-                            <p className="Project-meta">{Project.date} &#10072; <a href={Project.github} className='fa fa-github'> GitHub</a></p>
-                            <a href={Project.visit} style={{color:"black"}} className="Project-title fa fa-external-link"> {Project.title}</a>
+                            <p className="Project-meta">{Project.date} &#10072; <a href={Project.github} id='project-symb'><i className='fa-brands fa-github' id='project-symb'/> GitHub</a></p>
+                            <a href={Project.visit} target='_blank' rel='noreferrer' style={{color:"black"}} className="Project-title"><i className='fa fa-external-link'/> {Project.title}</a>
                             <p className="Project-description">{Project.description}</p>
                             <div className="Project-tags">
                                 {Project.tags.map((tag, tagIndex) => (

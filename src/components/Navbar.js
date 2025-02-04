@@ -19,6 +19,7 @@ export default function Navbar() {
         window.removeEventListener("scroll", handleScroll);
       };
     }, []);
+    
   
   return (
     <>
@@ -38,7 +39,7 @@ export default function Navbar() {
           </li>
           <li>
             <a href="#About-Section" className="navbar-link">
-              About Us
+              About
             </a>
           </li>
           <li>
@@ -46,12 +47,9 @@ export default function Navbar() {
               Projects
             </a>
           </li>
-          <li>
-           <a href="/" className="navbar-link" >About</a>
-          </li>
            <li>
-           <a href="https://bhartiabhi.netlify.app" className="navbar-link">
-              Contact Us
+           <a href="#contact" className="navbar-link">
+              Contact
             </a>
            </li>
         </ul> 

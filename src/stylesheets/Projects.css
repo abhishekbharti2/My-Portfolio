@@ -71,6 +71,11 @@
     padding: 6px 12px;
     border-radius: 16px;
   }
+  #project-symb{
+    color: green;
+    font-size: 15px;
+    text-decoration: none;
+  }
   
   /* {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{ Media Queries }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} */
 

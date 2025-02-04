@@ -54,10 +54,11 @@
   color: var(--web-color);
 }
 
-.fa {
+.fa-brands {
   text-decoration: none;
   margin: 5px 0;
-  color: rgb(59, 131, 0);
+  font-size: 25px;
+  color: rgb(0, 166, 138);
 }
 
 .scl-head {

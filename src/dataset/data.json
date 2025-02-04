@@ -71,38 +71,16 @@
       "visit": "https://registerkaro-clone.netlify.app"
     },
     {
-      "author": "Miss Nora",
+      "github": "https://github.com/abhishekbharti2/ejoyrBackend",
       "date": "1 Jan 2023",
-      "title": "Scale-Up Company Offer",
-      "description": "Starting a community doesn’t need to be complicated, but how do you get started?",
+      "title": "Ejoyr Backend Project",
+      "description": "It is a Backend project of E-Commerce web app",
       "tags": [
-        "Private Limited Company",
-        "Customer Success"
+        "Node.js",
+        "Express",
+        "MongoDB"
       ],
-      "images": "/dataset/blogs/blog-2.png"
-    }
-  ],
-  "sliders": [
-    {
-        "name": "Chris",
-        "position": "President and CEO, PrintReach, USA",
-        "image": "/dataset/blogs/blog-6.png",
-        "rating": 4.5,
-        "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure sint amet occaecat cupidatat non proident."
-    },
-    {
-        "name": "Jhonson",
-        "position": "President and CEO, PrintReach, USA",
-        "image": "/dataset/blogs/blog-5.png",
-        "rating": 4.5,
-        "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure sint amet occaecat cupidatat non proident."
-    },
-    {
-        "name": "Jane Doe",
-        "position": "President and CEO, PrintReach, USA",
-        "image": "/dataset/blogs/blog-4.png",
-        "rating": 4.5,
-        "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure sint amet occaecat cupidatat non proident."
+      "images": "/assets/project-6.AVIF"
     }
   ]
 }

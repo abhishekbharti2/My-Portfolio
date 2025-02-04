@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import '../stylesheets/Home.css'
 export default function Home() {
     const [project, setProject] = useState('WebDev');
-    // React LifeCycles 
 
     const skills = [
         "C", "C++", "JavaScript", "Python",
@@ -12,6 +11,9 @@ export default function Home() {
         "Git", "MS Office Suite", "MATLAB Basics",
         "Rest API", "Communication", "Team Work", "Leadership"
     ];
+    function handleHeart(){
+        document.getElementById('heart-btn').style.color = 'red'
+      }
     return (
 
         <div className="home-container">
@@ -81,7 +83,7 @@ export default function Home() {
                             <input type="text" name="Service" value={project} />
                         </div>
                         <textarea name="Message" placeholder='Write Specification' required />
-                        <button type='submit' className='card-btn' style={{ width: '80%' }}>Submit</button>
+                        <button type='submit' id='contact-submit' style={{ width: '80%' }}>Submit</button>
                     </form>
                     <label htmlFor="check-project" className='label-in'>&#x2718;</label>
                 </div>
@@ -89,12 +91,12 @@ export default function Home() {
             <div className="first-cont" id='Intro-Section' >
                 <div className="left-cont">
                     <div className='gestureCont'>
-                        <h3>Hello There <div className='gesture'>&#128400;</div></h3>
+                        <h3>Hey! There <div className='gesture'>&#128400;</div></h3>
                         <h1 className='nameTag'>I'm <span>Abhishek Bharti</span></h1>
                         <h2>A Full Stack Developer</h2>
                     </div>
                     <div>
-                        <h2 style={{ color: 'white' }}>Work With Us: </h2>
+                        <span style={{ color: 'grey' }}>Start Work Together: </span>
                         <div className="select-cont"> <select name="select" onChange={(v) => { setProject(v.target.value) }} >
                             <option value="Not Selected">Start Project</option>
                             <option value="WebSite Develop">WebDev</option>
@@ -105,10 +107,11 @@ export default function Home() {
                             <label htmlFor="check-project" className='label-go'>Go</label></div>
                     </div>
                     <div className="social-media">
-                        <a href='/' className='fa fa-instagram'> </a>
-                        <a href='/' className='fa fa-facebook'> </a>
-                        <a href='/' className='fa fa-twitter'> </a>
-                        <a href='https://www.youtube.com/@web-xer1' className='fa fa-youtube'> </a>
+                        <a href="https://www.facebook.com/profile.php?id=100027548940668" className="fa-brands fa-facebook"> </a>
+                        <a href="https://www.linkedin.com/in/abhishek-bharti7843/" className="fa-brands fa-linkedin"> </a>
+                        <a href="https://github.com/abhishekbharti2" className="fa-brands fa-github"> </a>
+                        <a href="https://x.com/AD_Jack9?t=9DGN-8JDwo4rVMXtPKXpUA&s=08" className='fa-brands fa-x-twitter'> </a>
+                        <i class='fa fa-heart' id='heart-btn' onClick={handleHeart}></i>
                     </div>
                 </div>
                 <div className="right-cont">
@@ -117,15 +120,15 @@ export default function Home() {
             </div>
             <div className="second-cont" id='About-Section'>
                 <div className="sec-left">
-                    <h2>Let Us Introduce</h2>
-                    <p>Welcome to my portfolio! I'm a passionate Full Stack Developer skilled in web development, programming, and software engineering. With expertise in front-end and back-end technologies, I build dynamic, scalable, and user-friendly applications. Proficient in React.js, Node.js, MySQL, and more, I thrive on solving complex problems and creating innovative solutions. Explore my projects and skills to see how I bring ideas to life with clean, efficient, and high-quality code. Let’s create something amazing! 🚀</p>
+                    <h2 className='sec-h2'>Let Me Introduce</h2>
+                    <p>Front-End Developer with a B.Tech in Electronics and Communication Engineering from IIIT Bhopal. Skilled in React.js, JavaScript, Node.js, and MySQL, with hands-on experience in building scalable web applications. Completed Skyscanner’s Front-End Engineering Virtual Experience and developed projects like VerseEx, a space exploration platform. Strong problem-solving abilities with 200+ DSA problems solved on LeetCode and CodeStudio. Passionate about UI/UX, full-stack development, and scalable solutions. Seeking a Front-End or Full-Stack Developer role to leverage technical skills in creating innovative web applications. Strong leadership, teamwork, and communication skills with experience in organizing tech and community events.</p>
                     <a href='/assets/Abhishek_Bharti.pdf' class="animated-button">
                         <span>Get Resume</span>
                         <span></span>
                     </a>
                 </div>
                 <div className="sec-mid">
-                    <h2>My Skills</h2>
+                    <h2 className='sec-h2'>My Skills</h2>
                     <div className="skills-container">
                         <div className="skills-grid">
                             {skills.map((skill, index) => (

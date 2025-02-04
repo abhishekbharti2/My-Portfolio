@@ -66,13 +66,15 @@
   color: var(--web-color);
 }
 
+
 @media (max-width:1000px) {
   .scrolled>ul>li>a{
     color: rgb(255, 255, 255);
   }
+
   #label-btn-1 {
     display: block;
-    color: rgb(161, 247, 255);
+    color: rgb(159, 0, 180);
   }
 
   .site-title{
@@ -149,7 +151,7 @@
 
   #checkbox-1:checked~#label-btn-2 {
     display: block;
-    color: rgb(161, 247, 255);
+    color: rgb(159, 0, 180);
   }
 }
 

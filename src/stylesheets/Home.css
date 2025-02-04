@@ -64,7 +64,8 @@ tr:nth-child(even) {
     flex-direction: column;
     padding: 1%;
 }
-.some-info>h3{
+
+.some-info>h3 {
     background-color: rgb(141, 141, 141);
     padding: 10px;
     color: white;
@@ -78,12 +79,14 @@ tr:nth-child(even) {
     width: 50%;
     padding: 20px 0px;
 }
-form>i{
+
+form>i {
     font-size: 13px;
     color: red;
     text-align: center;
     text-wrap: wrap;
 }
+
 .form-in>form>input,
 .file-date {
     background: none;
@@ -118,16 +121,19 @@ form>i{
     flex-wrap: wrap;
     gap: 1rem;
 }
-.gestureCont>*{
+
+.gestureCont>* {
     color: #ddd;
 }
+
 .gestureCont {
     padding: 5px;
     font-size: 25px;
     -webkit-user-select: none;
     border-bottom: 2px solid grey;
 }
-.nameTag>span{
+
+.nameTag>span {
     color: var(--web-color);
 }
 
@@ -191,11 +197,12 @@ form>i{
     display: none;
 }
 
-.file-date{
+.file-date {
     display: flex;
     justify-content: space-between;
     border: none;
 }
+
 .file-date>input {
     padding: 2px;
     cursor: pointer;
@@ -233,8 +240,7 @@ form>i{
     height: auto;
 }
 
-.sec-left>p,
-.sec-left>h2 {
+.sec-left>p {
     width: 100%;
     text-align: justify;
     color: rgb(62, 62, 62);
@@ -242,20 +248,24 @@ form>i{
     flex-wrap: wrap;
 }
 
+.sec-h2 {
+    color: rgb(86, 86, 86);
+    margin: 10px;
+}
 
 .skills-container {
     max-width: 100%;
     text-align: center;
-  }
-  
-  .skills-grid {
+}
+
+.skills-grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
-  }
-  
-  .skill-box {
+}
+
+.skill-box {
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
@@ -265,47 +275,70 @@ form>i{
     font-weight: bold;
     color: #0f1c3f;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out;
+    transition: all .5s ease-in-out;
     cursor: pointer;
-  }
-  
-  .skill-box:hover {
-    transform: scale(1.05);
-  }
-  
-  .skill-box:nth-child(odd) {
-    background: linear-gradient(135deg, #ffe8fe, #fff4f4);
-  }
-  
-  .skill-box:nth-child(even) {
-    background: linear-gradient(135deg, #d0f6df, #fefefe);
-  }
-  
+}
 
-.gesture{
+.skill-box:hover {
+    transform: scale(1.05);
+}
+.skill-box:active {
+    scale: .8;
+}
+
+.skill-box:nth-child(odd) {
+    background: linear-gradient(135deg, #ffe8fe, #fff4f4);
+}
+
+.skill-box:nth-child(even) {
+    background: linear-gradient(135deg, #d0f6df, #fefefe);
+}
+
+
+.gesture {
     font-size: 40px;
     animation: gestures 3s ease infinite;
     width: min-content;
     display: inline-block;
-    transform: translateY(-10px);
+    padding-bottom: 10px;
+    transform: translateY(-25%);
+    position: absolute;
 }
+
+.fa-heart {
+    padding-top: 5px;
+    font-size: 25px;
+    color: white;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.fa-heart:active {
+    scale: .5;
+}
+
 @keyframes gestures {
-    0%{
+    0% {
         rotate: 0deg;
     }
-    10%{
+
+    10% {
         rotate: 30deg;
     }
-    20%{
+
+    20% {
         rotate: -30deg;
     }
-    30%{
+
+    30% {
         rotate: 30deg;
     }
-    40%{
+
+    40% {
         rotate: -30deg;
     }
-    100%{
+
+    100% {
         rotate: 0deg;
     }
 }
@@ -337,16 +370,20 @@ form>i{
         width: 100%;
         height: fit-content;
     }
-    .right-cont{
+
+    .right-cont {
         order: 1;
     }
-    .left-cont{
+
+    .left-cont {
         order: 2;
     }
-    .gestureCont{
-        font-size:15px;
+
+    .gestureCont {
+        font-size: 15px;
     }
-    .gesture{
+
+    .gesture {
         font-size: 20px;
     }
 
@@ -369,16 +406,20 @@ form>i{
         width: 100%;
         height: 100%;
     }
-    .some-info{
+
+    .some-info {
         padding-top: 10px;
         width: 100%;
     }
-    th, td{
+
+    th,
+    td {
         font-size: 7px;
     }
-    .some-info>h3{
-       padding: 5px 10px;
-       font-size: small;
+
+    .some-info>h3 {
+        padding: 5px 10px;
+        font-size: small;
     }
 }
 
@@ -397,9 +438,9 @@ form>i{
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
     text-decoration: none;
-  }
-  
-  .animated-button span:last-child {
+}
+
+.animated-button span:last-child {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -410,27 +451,24 @@ form>i{
     border-radius: 50%;
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
-  }
-  
-  .animated-button span:first-child {
+}
+
+.animated-button span:first-child {
     position: relative;
     z-index: 1;
-  }
-  
-  .animated-button:hover {
+}
+
+.animated-button:hover {
     box-shadow: 0 0 0 5px #2195f360;
     color: #ffffff;
-  }
-  
-  .animated-button:active {
+}
+
+.animated-button:active {
     scale: 0.95;
-  }
-  
-  .animated-button:hover span:last-child {
+}
+
+.animated-button:hover span:last-child {
     width: 150px;
     height: 150px;
     opacity: 1;
-  }
-  
-  
-  
+}
