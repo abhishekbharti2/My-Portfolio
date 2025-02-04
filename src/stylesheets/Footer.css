@@ -29,7 +29,7 @@
 }
 
 .footer-paragraph {
-  text-align: justify;
+  text-align: center;
   text-wrap: wrap;
   font-size: small;
   padding: 0 5%;
@@ -42,12 +42,12 @@
 
 .socialmedia-handles {
   display: flex;
-  font-size: x-large;
+  font-size: xx-large;
   justify-content: space-evenly;
   flex-direction: row;
   margin: 2rem 1rem;
   height: auto;
-  width: 40%;
+  width: 35%;
 }
 
 .socialmedia-handles a:hover {
@@ -57,7 +57,7 @@
 .fa {
   text-decoration: none;
   margin: 5px 0;
-  color: grey;
+  color: rgb(59, 131, 0);
 }
 
 .scl-head {

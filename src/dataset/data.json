@@ -1,0 +1,108 @@
+{
+  "Projects": [
+    {
+      "github": "https://github.com/abhishekbharti2/VerseEx",
+      "date": "Nov 2024",
+      "title": "Verse Ex",
+      "description": "It is a Space Exploration Web Application, useful for cosmology learners.",
+      "tags": [
+        "React Application",
+        "Fully Resposive",
+        "API Integration",
+        "Search Facility",
+        "Filteration"
+      ],
+      "images": "/assets/project-1.png",
+      "visit": "https://verseex.netlify.app"
+    },
+    {
+      "github": "https://github.com/abhishekbharti2/E_Comm_Website",
+      "date": "July 2024",
+      "title": "Ejoyr",
+      "description": "It is an E-Commerce website for selling and listing products online.",
+      "tags": [
+        "Fully Resposive",
+        "Static Website",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "images": "/assets/project-2.png",
+      "visit": "https://ejoyr.netlify.app"
+    },
+    {
+      "github": "https://github.com/abhishekbharti2/doinbinary",
+      "date": "Oct 2024",
+      "title": "Do In Binary",
+      "description": "It is a freelancing website to provide clients to get their own website with fully customization.",
+      "tags": [
+        "React Application",
+        "Web3Forms Integration",
+        "Fully Resposive"
+      ],
+      "images": "/assets/project-3.png",
+      "visit": "https://doinbinary.netlify.app"
+    },
+    {
+      "github": "https://github.com/abhishekbharti2/Bill-Management",
+      "date": "Jan 2025",
+      "title": "Bill Management",
+      "description": "A task from '@BrightMoney' to make a Bill Management web app to managing monthly spends of user.",
+      "tags": [
+        "React Application",
+        "React-Redux",
+        "Fully Resposive",
+        "Data Filtering",
+        "bill customization"
+      ],
+      "images": "/assets/project-4.png",
+      "visit":"https://bill-managementabhi.netlify.app"
+        },
+    {
+      "github": "https://github.com/abhishekbharti2/RegisterKaro-Clone",
+      "date": "Feb 2025",
+      "title": "RegisterKaro Clone",
+      "description": "A task from '@RegisterKaro' to make their companies web app clone.",
+      "tags": [
+        "React Application",
+        "Fully Resposive"
+      ],
+      "images": "/assets/project-5.png",
+      "visit": "https://registerkaro-clone.netlify.app"
+    },
+    {
+      "author": "Miss Nora",
+      "date": "1 Jan 2023",
+      "title": "Scale-Up Company Offer",
+      "description": "Starting a community doesn’t need to be complicated, but how do you get started?",
+      "tags": [
+        "Private Limited Company",
+        "Customer Success"
+      ],
+      "images": "/dataset/blogs/blog-2.png"
+    }
+  ],
+  "sliders": [
+    {
+        "name": "Chris",
+        "position": "President and CEO, PrintReach, USA",
+        "image": "/dataset/blogs/blog-6.png",
+        "rating": 4.5,
+        "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure sint amet occaecat cupidatat non proident."
+    },
+    {
+        "name": "Jhonson",
+        "position": "President and CEO, PrintReach, USA",
+        "image": "/dataset/blogs/blog-5.png",
+        "rating": 4.5,
+        "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure sint amet occaecat cupidatat non proident."
+    },
+    {
+        "name": "Jane Doe",
+        "position": "President and CEO, PrintReach, USA",
+        "image": "/dataset/blogs/blog-4.png",
+        "rating": 4.5,
+        "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure sint amet occaecat cupidatat non proident."
+    }
+  ]
+}

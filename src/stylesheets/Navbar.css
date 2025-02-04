@@ -72,6 +72,7 @@
   }
   #label-btn-1 {
     display: block;
+    color: rgb(161, 247, 255);
   }
 
   .site-title{
@@ -148,6 +149,7 @@
 
   #checkbox-1:checked~#label-btn-2 {
     display: block;
+    color: rgb(161, 247, 255);
   }
 }
 

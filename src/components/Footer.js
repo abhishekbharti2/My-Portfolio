@@ -1,17 +1,17 @@
 import React from 'react'
-import './Footer.css'
+import '../stylesheets/Footer.css'
 export default function Footer() {
   return (
     <>
       <footer className='web-footer'>
         <div className='footer-div-1'>
           <div className='footer-div1-el'>
-            <h4 className='footer-headings'>DO IN BINARY</h4> <br />
+            <h4 className='footer-headings'>DO IN BINARY</h4><br/>
             <p className='footer-paragraph'>
-              Creative and Engaging Designs <br />
-              Modern Technologies <br />
-              Custom Solutions <br />
-              End-to-End Services <br />
+              Creative and Engaging Designs <br/>
+              Modern Technologies <br/>
+              Custom Solutions <br/>
+              End-to-End Services <br/>
               Responsive and Fast Websites</p>
           </div>
           <div className='footer-div1-el'>
@@ -25,7 +25,7 @@ export default function Footer() {
           <div className='footer-div1-el'>
             <h4 className='footer-headings'>DEVELOPER TEAM</h4> <br />
             <p className='fa'>&#xf0e0; bhartiabhishek760@gmail.com</p>
-            <li><a href="https://bhartiabhi.netlify.app#contact" className='contact-dev'>contact developers</a></li>
+            <li><a href="https://bhartiabhi.netlify.app#contact" className='contact-dev'>contact developer</a></li>
           </div>
         </div>
         <span className='scl-head'>Our Social Media Handles </span>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Navbar.css'
+import '../stylesheets/Navbar.css'
 export default function Navbar() {
 
   const [scrolled, setScrolled] = useState(false);
@@ -27,7 +27,7 @@ export default function Navbar() {
 
         <div className="site-title">
           <h1>
-            DoIn<span>Binary</span>
+            Abhishek <span>Bharti</span>
           </h1>
         </div>
         <ul className="link-container">
@@ -42,8 +42,8 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#Work-Section" className="navbar-link">
-              Our Work
+            <a href="#Projects" className="navbar-link">
+              Projects
             </a>
           </li>
           <li>
