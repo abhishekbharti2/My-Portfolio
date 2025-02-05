@@ -203,6 +203,7 @@ form>i {
     border: none;
 }
 
+
 .file-date>input {
     padding: 2px;
     cursor: pointer;
@@ -234,10 +235,15 @@ form>i {
     align-items: center;
     gap: 10px;
 }
-
+.sec-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .sec-right>img {
-    width: 300px;
+    width: 250px;
     height: auto;
+    border-radius: 50%;
 }
 
 .sec-left>p {

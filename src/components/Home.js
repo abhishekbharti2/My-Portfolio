@@ -17,7 +17,7 @@ export default function Home() {
     return (
 
         <div className="home-container">
-            <img className='setBg-img' src="https://th.bing.com/th/id/OIP.msjyJvFoaSjaDj-QKTmfkQAAAA?rs=1&pid=ImgDetMain" alt="imm" />
+            <img className='setBg-img' src="/assets/bg.jpg" alt="imm" />
             <input type="checkbox" name="checkk" id="check-project" />
             <div className="start-project">
                 <div className='form-in'>
@@ -115,7 +115,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="right-cont">
-                    <img src="/assets/logo-2.png" alt="" />
+                    <img src="/assets/logo-1.png" alt=" " />
                 </div>
             </div>
             <div className="second-cont" id='About-Section'>
@@ -140,7 +140,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="sec-right">
-                    <img src="https://i.pinimg.com/736x/7e/35/3f/7e353fb5f0e662d5d6c55cd9302d366d.jpg" alt=" " />
+                    <img src="/assets/logo-3.jpg" id='myPic' alt=" " />
                 </div>
             </div>
         </div>
