@@ -478,3 +478,18 @@ form>i {
     height: 150px;
     opacity: 1;
 }
+
+@keyframes pulse {
+    0%{
+        scale: 1;
+        color: rgb(255, 0, 0);
+    }
+    50%{
+        scale: .5;
+        color: rgb(255, 0, 212);
+    }
+    100%{
+        scale: 1;
+        color: rgb(255, 0, 0);
+    }
+}

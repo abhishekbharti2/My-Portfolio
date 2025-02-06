@@ -13,6 +13,8 @@ export default function Home() {
     ];
     function handleHeart(){
         document.getElementById('heart-btn').style.color = 'red'
+        document.getElementById('heart-btn').style.animation = 'pulse 1s infinite'
+
       }
     return (
 
