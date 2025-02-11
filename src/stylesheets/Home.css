@@ -242,8 +242,10 @@ form>i {
 }
 .sec-right>img {
     width: 250px;
-    height: auto;
-    border-radius: 50%;
+    height: 250px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all .5s ease-in;
 }
 
 .sec-left>p {

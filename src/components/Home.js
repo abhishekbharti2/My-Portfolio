@@ -142,7 +142,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="sec-right">
-                    <img src="/assets/logo-3.jpg" id='myPic' alt=" " />
+                    <img src="/assets/logo-3.png" id='myPic' alt=" " />
                 </div>
             </div>
         </div>
