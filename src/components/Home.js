@@ -1,21 +1,17 @@
 import React, { useState } from 'react'
 import '../stylesheets/Home.css'
+import skills from '../dataset/skills.json'
 export default function Home() {
     const [project, setProject] = useState('WebDev');
-
-    const skills = [
-        "C", "C++", "JavaScript", "Python",
-        "DSA", "DBMS", "OS", "HTML",
-        "CSS", "BootStrap", "React.js", "Node.js",
-        "Express", "MongoDB", "MySQL", "VSCode", "GitHub",
-        "Git", "MS Office Suite", "MATLAB Basics",
-        "Rest API", "Communication", "Team Work", "Leadership"
-    ];
-    function handleHeart(){
+    const [hidden, setHidden] = useState(null)
+    function handleHeart() {
         document.getElementById('heart-btn').style.color = 'red'
         document.getElementById('heart-btn').style.animation = 'pulse 1s infinite'
 
-      }
+    }
+    function handleSkillClick(item) {
+        setHidden(item)
+    }
     return (
 
         <div className="home-container">
@@ -132,13 +128,35 @@ export default function Home() {
                 <div className="sec-mid">
                     <h2 className='sec-h2'>My Skills</h2>
                     <div className="skills-container">
-                        <div className="skills-grid">
-                            {skills.map((skill, index) => (
-                                <div key={index} className="skill-box">
-                                    ✔️ {skill}
+                        {
+                            skills.map((item, index) => (
+                                <div key={index} className="skill-cat">
+                                    <div className='skill-set' onClick={() => handleSkillClick(item.skills)}>{item.category}</div>
+                                    {
+                                        hidden === item.skills && <div className='hidden-skill'>
+                                            <strong style={{color:'white', width:'100%', textAlign:'center'}}>{item.category}</strong>
+                                            <span id='cutBtn' onClick={() => setHidden(null)}>&#10005;</span>
+                                            {
+                                                hidden.map((sk, ind) => (
+                                                    <span key={ind} className='eachHide'>
+                                                        <img src={`assets/symbols/${sk}.png`} alt=" " className='skill-icon' />
+                                                        <span className='hidingsk' style={{animation:`blinking ${Math.random() * (7 - 5) + 5}s infinite`}}>{sk}</span>
+                                                    </span>
+                                                ))
+                                            }
+                                        </div>
+                                    }
                                 </div>
-                            ))}
-                        </div>
+                            ))
+                        }
+                        {/* <div className="skills-grid">
+                            {skills.PL.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
+                            {skills.CS.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
+                            {skills.FE.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
+                            {skills.BE.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
+                            {skills.DT.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
+                            {skills.SS.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
+                        </div> */}
                     </div>
                 </div>
                 <div className="sec-right">

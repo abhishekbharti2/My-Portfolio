@@ -262,17 +262,57 @@ form>i {
 }
 
 .skills-container {
-    max-width: 100%;
-    text-align: center;
-}
-
-.skills-grid {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 5px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    position: relative;
 }
 
+.skill-cat{
+    font-weight: bold;
+    border: none;
+    text-align: start;
+    margin: 1px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    z-index: inherit;
+    width: 100%;
+    height: max-content;
+}
+.skill-set{
+    width: 92%;
+    padding: 10px 15px;
+    background-color: rgb(202, 202, 202);
+    border-radius: 10px;
+}
+.skill-set:active{
+    scale: .97;
+}
+.hidden-skill{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #707070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    top: 0;
+    left: 0;
+    flex-wrap: wrap;
+    z-index: 100;
+    flex-direction: row;
+}
+#cutBtn{
+    position: absolute;
+    color: wheat;
+    right: 0;
+    top: 0;
+    padding: 5px 10px;
+}
 .skill-box {
     display: flex;
     align-items: center;
@@ -285,23 +325,44 @@ form>i {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
     transition: all .5s ease-in-out;
     cursor: pointer;
+    border: none;
+    box-shadow: 1px 1px 5px grey;
+    margin: 5px;
+}
+.eachHide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.skill-box:hover {
-    transform: scale(1.05);
+.skill-icon{
+    width: 100px;
+    margin: 10px;
 }
-.skill-box:active {
-    scale: .8;
+.hidingsk{
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 15px black;
+    /* animation: blinking 5s infinite; */
 }
-
-.skill-box:nth-child(odd) {
-    background: linear-gradient(135deg, #ffe8fe, #fff4f4);
+@keyframes blinking {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
-
-.skill-box:nth-child(even) {
-    background: linear-gradient(135deg, #d0f6df, #fefefe);
-}
-
 
 .gesture {
     font-size: 40px;
@@ -427,6 +488,15 @@ form>i {
 
     .some-info>h3 {
         padding: 5px 10px;
+        font-size: small;
+    }
+    .skill-icon{
+        width: 70px;
+        margin: 5px;
+    }
+    .hidingsk{
+        width: 75px;
+        height: 75px;
         font-size: small;
     }
 }
