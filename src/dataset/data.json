@@ -71,16 +71,19 @@
       "visit": "https://registerkaro-clone.netlify.app"
     },
     {
-      "github": "https://github.com/abhishekbharti2/ejoyrBackend",
-      "date": "1 Jan 2023",
-      "title": "Ejoyr Backend Project",
-      "description": "It is a Backend project of E-Commerce web app",
+      "github": "https://github.com/abhishekbharti2/Excel-Reader-React",
+      "date": "Feb 2025",
+      "title": "Excel Reader",
+      "description": "A simple tool to upload and process Excel files efficiently, Using for Digital Marketing.",
       "tags": [
-        "Node.js",
-        "Express",
-        "MongoDB"
+        "React Application",
+        "Excel Reader",
+        "Fully Resposive",
+        "Data Formatting",
+        "Private Repositery"
       ],
-      "images": "/assets/project-6.AVIF"
+      "images": "/assets/project-6.png",
+      "visit": "https://excelreader-abhi.netlify.app"
     }
   ]
 }
