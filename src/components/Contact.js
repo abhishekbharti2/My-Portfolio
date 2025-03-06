@@ -14,7 +14,7 @@ export default function Contact() {
             <h1 className='projects-start'>Contact Me</h1>
             <div className="contact-container">
                 <div className="contact-left">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11344.603545633849!2d81.57501089971723!3d23.184334986240234!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1738604162370!5m2!1sen!2sin" title='location'></iframe>
+                    <iframe className='pfImage' src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11344.603545633849!2d81.57501089971723!3d23.184334986240234!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1738604162370!5m2!1sen!2sin" title='location'></iframe>
                 </div>
                 <div className="contact-mid">
                     <div onClick={() => handleCopy('abhibharti365@gmail.com')}><i className='fa fa-envelope' />abhibharti365@gmail.com</div>
