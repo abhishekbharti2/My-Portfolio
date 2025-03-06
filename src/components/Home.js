@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../stylesheets/Home.css'
 import skills from '../dataset/skills.json'
 export default function Home() {
@@ -12,10 +12,33 @@ export default function Home() {
     function handleSkillClick(item) {
         setHidden(item)
     }
+    useEffect(() => {
+        document.querySelectorAll('.pfImage').forEach((element) =>{
+            element.addEventListener('load', () => {
+                console.log('Image Loaded');
+            })
+        })
+        document.getElementById('spin-Cont').style.display = 'none'
+      }, []);
     return (
 
         <div className="home-container">
-            <img className='setBg-img' src="/assets/bg.jpg" alt="imm" />
+            <div className="spin-container" id='spin-Cont'>
+                <div className="spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <span>Please Wait</span>
+            </div>
+            <img className='setBg-img pfImage' src="/assets/bg.jpg" alt="imm" />
             <input type="checkbox" name="checkk" id="check-project" />
             <div className="start-project">
                 <div className='form-in'>
@@ -109,18 +132,18 @@ export default function Home() {
                         <a href="https://www.linkedin.com/in/abhishek-bharti7843/" className="fa-brands fa-linkedin"> </a>
                         <a href="https://github.com/abhishekbharti2" className="fa-brands fa-github"> </a>
                         <a href="https://x.com/AD_Jack9?t=9DGN-8JDwo4rVMXtPKXpUA&s=08" className='fa-brands fa-x-twitter'> </a>
-                        <i class='fa fa-heart' id='heart-btn' onClick={handleHeart}></i>
+                        <i className='fa fa-heart' id='heart-btn' onClick={handleHeart}></i>
                     </div>
                 </div>
                 <div className="right-cont">
-                    <img src="/assets/logo-1.png" alt=" " />
+                    <img src="/assets/logo-1.png" alt=" " className='pfImage' />
                 </div>
             </div>
             <div className="second-cont" id='About-Section'>
                 <div className="sec-left">
                     <h2 className='sec-h2'>Let Me Introduce</h2>
                     <p>Front-End Developer with a B.Tech in Electronics and Communication Engineering from IIIT Bhopal. Skilled in React.js, JavaScript, Node.js, and MySQL, with hands-on experience in building scalable web applications. Completed Skyscanner’s Front-End Engineering Virtual Experience and developed projects like VerseEx, a space exploration platform. Strong problem-solving abilities with 200+ DSA problems solved on LeetCode and CodeStudio. Passionate about UI/UX, full-stack development, and scalable solutions. Seeking a Front-End or Full-Stack Developer role to leverage technical skills in creating innovative web applications. Strong leadership, teamwork, and communication skills with experience in organizing tech and community events.</p>
-                    <a href='/assets/Abhishek_Bharti.pdf' class="animated-button">
+                    <a href='/assets/Abhishek_Bharti.pdf' className="animated-button">
                         <span>Get Resume</span>
                         <span></span>
                     </a>
@@ -134,13 +157,13 @@ export default function Home() {
                                     <div className='skill-set' onClick={() => handleSkillClick(item.skills)}>{item.category}</div>
                                     {
                                         hidden === item.skills && <div className='hidden-skill'>
-                                            <strong style={{color:'white', width:'100%', textAlign:'center'}}>{item.category}</strong>
+                                            <strong style={{ color: 'white', width: '100%', textAlign: 'center' }}>{item.category}</strong>
                                             <span id='cutBtn' onClick={() => setHidden(null)}>&#10005;</span>
                                             {
                                                 hidden.map((sk, ind) => (
                                                     <span key={ind} className='eachHide'>
                                                         <img src={`assets/symbols/${sk}.png`} alt=" " className='skill-icon' />
-                                                        <span className='hidingsk' style={{animation:`blinking ${Math.random() * (7 - 5) + 5}s infinite`}}>{sk}</span>
+                                                        <span className='hidingsk' style={{ animation: `blinking ${Math.random() * (7 - 5) + 5}s infinite` }}>{sk}</span>
                                                     </span>
                                                 ))
                                             }
@@ -160,7 +183,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="sec-right">
-                    <img src="/assets/logo-3.png" id='myPic' alt=" " />
+                    <img src="/assets/logo-3.png" id='myPic' alt=" " className='pfImage' />
                 </div>
             </div>
         </div>

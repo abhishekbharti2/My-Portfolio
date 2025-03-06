@@ -54,10 +54,10 @@ export default function Navbar() {
            </li>
         </ul> 
 
-        <label for="checkbox-1" className="label-check" id="label-btn-1">
+        <label htmlFor="checkbox-1" className="label-check" id="label-btn-1">
           &#9776;
         </label>
-        <label for="checkbox-1" className="label-check" id="label-btn-2">
+        <label htmlFor="checkbox-1" className="label-check" id="label-btn-2">
           &#10005;
         </label>
       </nav>
