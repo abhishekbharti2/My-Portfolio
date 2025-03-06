@@ -12,32 +12,59 @@ export default function Home() {
     function handleSkillClick(item) {
         setHidden(item)
     }
+
+    const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
-        document.querySelectorAll('.pfImage').forEach((element) =>{
-            element.addEventListener('load', () => {
-                console.log('Image Loaded');
-            })
-        })
-        document.getElementById('spin-Cont').style.display = 'none'
-      }, []);
+        const images = document.querySelectorAll(".pfImage");
+        let loadedImages = 0;
+
+        if (images.length === 0) {
+            setIsLoading(false); 
+            return;
+        }
+
+        const handleImageLoad = () => {
+            loadedImages++;
+            if (loadedImages === images.length) {
+                setIsLoading(false);
+            }
+        };
+
+        images.forEach((img) => {
+            if (img.complete) {
+                handleImageLoad();
+            } else {
+                img.addEventListener("load", handleImageLoad);
+            }
+        });
+        return () => {
+            images.forEach((img) => img.removeEventListener("load", handleImageLoad));
+        };
+    }, []);
+
+
     return (
 
         <div className="home-container">
-            <div className="spin-container" id='spin-Cont'>
-                <div className="spinner">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+            {
+                isLoading &&
+                <div className="spin-container" id='spin-Cont'>
+                    <div className="spinner">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <span>Please Wait</span>
                 </div>
-                <span>Please Wait</span>
-            </div>
+            }
             <img className='setBg-img pfImage' src="/assets/bg.jpg" alt="imm" />
             <input type="checkbox" name="checkk" id="check-project" />
             <div className="start-project">
