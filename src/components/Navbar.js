@@ -26,10 +26,8 @@ export default function Navbar() {
       <nav className={`nav-container ${scrolled ? "scrolled" : ""}`}>
         <input type="checkbox" id="checkbox-1" className="check-boxes" />
 
-        <div className="site-title">
-          <h1>
-            Abhishek <span>Bharti</span>
-          </h1>
+        <div id="site-title">
+         Abhishek <span>Bharti</span>
         </div>
         <ul className="link-container">
           <li>

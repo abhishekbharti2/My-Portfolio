@@ -20,7 +20,7 @@ export default function Home() {
         let loadedImages = 0;
 
         if (images.length === 0) {
-            setIsLoading(false); 
+            setIsLoading(false);
             return;
         }
 
@@ -65,7 +65,7 @@ export default function Home() {
                     <span>Please Wait</span>
                 </div>
             }
-            <img className='setBg-img pfImage' src="/assets/bg.jpg" alt="imm" />
+            <img className='setBg-img pfImage' src="/assets/bg.webp" alt="imm" />
             <input type="checkbox" name="checkk" id="check-project" />
             <div className="start-project">
                 <div className='form-in'>
@@ -163,16 +163,15 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="right-cont">
-                    <img src="/assets/logo-1.png" alt=" " className='pfImage' />
+                    <img src="/assets/logo-1.webp" alt=" " className='pfImage' />
                 </div>
             </div>
             <div className="second-cont" id='About-Section'>
                 <div className="sec-left">
                     <h2 className='sec-h2'>Let Me Introduce</h2>
                     <p>Front-End Developer with a B.Tech in Electronics and Communication Engineering from IIIT Bhopal. Skilled in React.js, JavaScript, Node.js, and MySQL, with hands-on experience in building scalable web applications. Completed Skyscanner’s Front-End Engineering Virtual Experience and developed projects like VerseEx, a space exploration platform. Strong problem-solving abilities with 200+ DSA problems solved on LeetCode and CodeStudio. Passionate about UI/UX, full-stack development, and scalable solutions. Seeking a Front-End or Full-Stack Developer role to leverage technical skills in creating innovative web applications. Strong leadership, teamwork, and communication skills with experience in organizing tech and community events.</p>
-                    <a href='/assets/Abhishek_Bharti.pdf' className="animated-button">
-                        <span>Get Resume</span>
-                        <span></span>
+                    <a href='/assets/Abhishek_Bharti.pdf' className='animated-btn'>
+                        <span class="text">Get Resume</span><span>Thanks!</span>
                     </a>
                 </div>
                 <div className="sec-mid">
@@ -189,7 +188,7 @@ export default function Home() {
                                             {
                                                 hidden.map((sk, ind) => (
                                                     <span key={ind} className='eachHide'>
-                                                        <img src={`assets/symbols/${sk}.png`} alt=" " className='skill-icon' />
+                                                        <img src={`assets/symbols/${sk}.webp`} alt=" " className='skill-icon' />
                                                         <span className='hidingsk' style={{ animation: `blinking ${Math.random() * (7 - 5) + 5}s infinite` }}>{sk}</span>
                                                     </span>
                                                 ))
@@ -199,18 +198,10 @@ export default function Home() {
                                 </div>
                             ))
                         }
-                        {/* <div className="skills-grid">
-                            {skills.PL.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
-                            {skills.CS.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
-                            {skills.FE.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
-                            {skills.BE.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
-                            {skills.DT.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
-                            {skills.SS.map((skill, index) => (<button key={index} className="skill-box"> {skill} </button> ))}
-                        </div> */}
                     </div>
                 </div>
                 <div className="sec-right">
-                    <img src="/assets/logo-3.png" id='myPic' alt=" " className='pfImage' />
+                    <img src="/assets/logo-3.webp" id='myPic' alt=" " className='pfImage' />
                 </div>
             </div>
         </div>

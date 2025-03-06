@@ -12,7 +12,7 @@
         "Search Facility",
         "Filteration"
       ],
-      "images": "/assets/project-1.png",
+      "images": "/assets/project-1.webp",
       "visit": "https://verseex.netlify.app"
     },
     {
@@ -27,21 +27,23 @@
         "CSS",
         "JavaScript"
       ],
-      "images": "/assets/project-2.png",
+      "images": "/assets/project-2.webp",
       "visit": "https://ejoyr.netlify.app"
     },
     {
       "github": "https://github.com/abhishekbharti2/doinbinary",
       "date": "Oct 2024",
-      "title": "Do In Binary",
-      "description": "It is a freelancing website to provide clients to get their own website with fully customization.",
+      "title": "Live Weather App",
+      "description": "It is a Live weather app, it shows weather information according to user's entered location.",
       "tags": [
-        "React Application",
-        "Web3Forms Integration",
-        "Fully Resposive"
+        "Fully Resposive",
+        "Weather API",
+        "HTML",
+        "CSS",
+        "JavaScript"
       ],
-      "images": "/assets/project-3.png",
-      "visit": "https://doinbinary.netlify.app"
+      "images": "/assets/project-3.webp",
+      "visit": "https://weatherinformationnow.netlify.app/"
     },
     {
       "github": "https://github.com/abhishekbharti2/Bill-Management",
@@ -55,9 +57,9 @@
         "Data Filtering",
         "bill customization"
       ],
-      "images": "/assets/project-4.png",
-      "visit":"https://bill-managementabhi.netlify.app"
-        },
+      "images": "/assets/project-4.webp",
+      "visit": "https://bill-managementabhi.netlify.app"
+    },
     {
       "github": "https://github.com/abhishekbharti2/RegisterKaro-Clone",
       "date": "Feb 2025",
@@ -67,13 +69,13 @@
         "React Application",
         "Fully Resposive"
       ],
-      "images": "/assets/project-5.png",
+      "images": "/assets/project-5.webp",
       "visit": "https://registerkaro-clone.netlify.app"
     },
     {
       "github": "https://github.com/abhishekbharti2/Excel-Reader-React",
       "date": "Feb 2025",
-      "title": "Excel Reader",
+      "title": "Excel Formatter",
       "description": "A simple tool to upload and process Excel files efficiently, Using for Digital Marketing.",
       "tags": [
         "React Application",
@@ -82,7 +84,7 @@
         "Data Formatting",
         "Private Repositery"
       ],
-      "images": "/assets/project-6.png",
+      "images": "/assets/project-6.webp",
       "visit": "https://excelreader-abhi.netlify.app"
     }
   ]

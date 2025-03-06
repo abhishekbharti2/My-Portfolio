@@ -5,8 +5,8 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  z-index: 10;
-  padding: 25px 0px;
+  z-index: 110;
+  padding: 20px 0px;
   transition: all .5s;
 }
 .scrolled{
@@ -55,17 +55,16 @@
   display: none;
 }
 
-.site-title {
+#site-title, #site-title span{
+  color: white;
   text-shadow: 1px 1px 1px black;
   -webkit-user-select: none;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 30px;
 }
-.site-title>h1{
-  color: white;
-}
-.site-title>h1>span {
+#site-title>span{
   color: var(--web-color);
 }
-
 
 @media (max-width:1000px) {
   .scrolled>ul>li>a{

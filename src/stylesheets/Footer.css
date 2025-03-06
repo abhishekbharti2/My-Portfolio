@@ -6,7 +6,9 @@
   width: auto;
   z-index: 9;
 }
-
+.web-footer *{
+  color: grey;
+}
 .footer-div-1 {
   width: 100%;
   display: flex;
@@ -25,7 +27,6 @@
   width: 300px;
   height: 150px;
   padding: 20px 5px;
-  color: grey;
 }
 
 .footer-paragraph {
@@ -33,10 +34,8 @@
   text-wrap: wrap;
   font-size: small;
   padding: 0 5%;
-  color: grey;
 }
 .footer-headings {
-  color: rgb(180, 180, 180);
   font-weight: bolder;
 }
 
@@ -58,18 +57,20 @@
   text-decoration: none;
   margin: 5px 0;
   font-size: 25px;
-  color: rgb(0, 166, 138);
 }
 
 .scl-head {
-  color: rgb(151, 151, 0);
+  color: rgba(196, 196, 0, 0.734);
   font-size: 15px;
 }
 .copyright-p {
-  color: rgb(212, 212, 212);
   font-size: 15px;
 }
 .contact-dev {
   color: var(--web-color);
   text-decoration: none;
+}
+#credit-first-cont{
+  justify-content: center;
+  align-items: center;
 }
