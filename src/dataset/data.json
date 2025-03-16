@@ -16,7 +16,7 @@
       "visit": "https://verseex.netlify.app"
     },
     {
-      "github": "https://github.com/abhishekbharti2/E_Comm_Website",
+      "github": "https://github.com/abhishekbharti2/Ejoyr",
       "date": "July 2024",
       "title": "Ejoyr",
       "description": "It is an E-Commerce website for selling and listing products online.",
@@ -31,19 +31,18 @@
       "visit": "https://ejoyr.netlify.app"
     },
     {
-      "github": "https://github.com/abhishekbharti2/doinbinary",
-      "date": "Oct 2024",
-      "title": "Live Weather App",
-      "description": "It is a Live weather app, it shows weather information according to user's entered location.",
+      "github": "https://github.com/abhishekbharti2/Server-VerseEX",
+      "date": "March 2025",
+      "title": "API Server VerseEx",
+      "description": "It is an API server for VerseEx, to provide Information.",
       "tags": [
-        "Fully Resposive",
-        "Weather API",
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "Node Js",
+        "Express",
+        "Cors",
+        "MongoDB"
       ],
       "images": "/assets/project-3.webp",
-      "visit": "https://weatherinformationnow.netlify.app/"
+      "visit": "https://server-verseex.onrender.com/api"
     },
     {
       "github": "https://github.com/abhishekbharti2/Bill-Management",
@@ -57,8 +56,8 @@
         "Data Filtering",
         "bill customization"
       ],
-      "images": "/assets/project-4.webp",
-      "visit": "https://bill-managementabhi.netlify.app"
+      "images": "/assets/project-4.jpg",
+      "visit": ""
     },
     {
       "github": "https://github.com/abhishekbharti2/RegisterKaro-Clone",
@@ -70,10 +69,10 @@
         "Fully Resposive"
       ],
       "images": "/assets/project-5.webp",
-      "visit": "https://registerkaro-clone.netlify.app"
+      "visit": ""
     },
     {
-      "github": "https://github.com/abhishekbharti2/Excel-Reader-React",
+      "github": "https://github.com/abhishekbharti2/Excel-Formatter",
       "date": "Feb 2025",
       "title": "Excel Formatter",
       "description": "A simple tool to upload and process Excel files efficiently, Using for Digital Marketing.",
@@ -85,7 +84,7 @@
         "Private Repositery"
       ],
       "images": "/assets/project-6.webp",
-      "visit": "https://excelreader-abhi.netlify.app"
+      "visit": "https://excelformatter.netlify.app"
     }
   ]
 }
