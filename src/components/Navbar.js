@@ -1,56 +1,50 @@
 import React, { useState, useEffect } from 'react';
-import '../stylesheets/Navbar.css'
-export default function Navbar() {
+import { NavLink } from 'react-router-dom';
+import '../stylesheets/Navbar.css';
 
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-  
-    useEffect(() => {
-      window.addEventListener("scroll", handleScroll);
-  
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
-    
-  
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 10);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <nav className={`nav-container ${scrolled ? "scrolled" : ""}`}>
         <input type="checkbox" id="checkbox-1" className="check-boxes" />
 
         <div id="site-title">
-         Abhishek <span>Bharti</span>
+          Abhishek <span>Bharti</span>
         </div>
+
         <ul className="link-container">
           <li>
-            <a href="#Intro-Section" className="navbar-link">
+            <NavLink to="/" className="navbar-link">
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#About-Section" className="navbar-link">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#Projects" className="navbar-link">
+            <NavLink to="/projects" className="navbar-link">
               Projects
-            </a>
+            </NavLink>
           </li>
-           <li>
-           <a href="#contact" className="navbar-link">
+          <li>
+            <NavLink to="/contact" className="navbar-link">
               Contact
-            </a>
-           </li>
-        </ul> 
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/admin" className="navbar-link">
+              Admin
+            </NavLink>
+          </li>
+        </ul>
 
         <label htmlFor="checkbox-1" className="label-check" id="label-btn-1">
           &#9776;
@@ -59,11 +53,6 @@ export default function Navbar() {
           &#10005;
         </label>
       </nav>
-
-      <div id="loading-page">
-        <div className="spinner-loading"></div>
-        <span className="loading-title">Please Wait</span>
-      </div>
     </>
   );
 }
