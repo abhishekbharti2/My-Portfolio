@@ -3,9 +3,9 @@ import '../stylesheets/Home.css'
 import skills from '../dataset/skills.json'
 
 export default function Home() {
-    const [project, setProject] = useState('WebDev');
+    const [project, setProject] = useState('Basic Level');
     const [hidden, setHidden] = useState(null)
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(<div className="loading-screen"><span className="loader"></span><p>Be Patience</p></div>);
 
     function handleHeart() {
         const heartBtn = document.getElementById('heart-btn');
@@ -22,14 +22,14 @@ export default function Home() {
         let loadedImages = 0;
 
         if (images.length === 0) {
-            setIsLoading(false);
+            setIsLoading(null);
             return;
         }
 
         const handleImageLoad = () => {
             loadedImages++;
             if (loadedImages === images.length) {
-                setIsLoading(false);
+                setIsLoading(null);
             }
         };
 
@@ -48,17 +48,8 @@ export default function Home() {
 
     return (
         <div className="portfolio-container">
-            {isLoading && (
-                <div className="loading-screen">
-                    <div className="spinner">
-                        {[...Array(10)].map((_, i) => <div key={i} ></div>)}
-                    </div>
-                    <span>Loading Portfolio...</span>
-                </div>
-            )}
-
+            {isLoading}
             <img className='portfolio-bg portfolio-image' src="/assets/bg.webp" alt="Background" />
-            
             <input type="checkbox" id="project-modal-toggle" className="modal-toggle" />
             
             <div className="project-modal">
@@ -68,22 +59,19 @@ export default function Home() {
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Service</th>
                                     <th>Expect Time</th>
-                                    <th>Low ₹</th>
-                                    <th>Mid ₹</th>
-                                    <th>High ₹</th>
+                                    <th>Basic</th>
+                                    <th>Moderate </th>
+                                    <th>Advanced</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Web Dev</td>
-                                    <td>3-7 days</td>
-                                    <td>500 – 1,500</td>
-                                    <td>2,000 – 5,000</td>
-                                    <td>6,000 – 10,000</td>
+                                    <td>3-10 days</td>
+                                    <td>₹ 500 – 1,500</td>
+                                    <td>₹ 2,000 – 5,000</td>
+                                    <td>₹ 6,000 – 10,000</td>
                                 </tr>
-                                {/* Other table rows remain the same */}
                             </tbody>
                         </table>
                     </div>
@@ -118,27 +106,20 @@ export default function Home() {
                         <span className="cta-text">Let's Work Together:</span>
                         <div className="project-selector">
                             <select onChange={(e) => setProject(e.target.value)}>
-                                <option value="Not Selected">Select Project Type</option>
-                                <option value="WebSite Develop">Web Development</option>
-                                <option value="Poster Design">Poster Design</option>
-                                <option value="Logo Design">Logo Design</option>
-                                <option value="Content Writing">Content Writing</option>
+                                <option value="Not Selected">Select Level</option>
+                                <option value="Basic Level">Basics Level</option>
+                                <option value="Moderate Level">Moderate Level</option>
+                                <option value="Advanced Level">Advanced Level</option>
                             </select>
                             <label htmlFor="project-modal-toggle" className='cta-button'>Get Started</label>
                         </div>
                     </div>
                     
                     <div className="social-links">
-                        {['facebook', 'linkedin', 'github', 'x-twitter'].map((platform) => (
-                            <a 
-                                key={platform} 
-                                href={`https://www.${platform}.com/yourprofile`} 
-                                className={`fab fa-${platform}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            > </a>
-                        ))}
-                        <i className='fas fa-heart' id='heart-btn' onClick={handleHeart}></i>
+                         <a href="https://x.com/abhibhrt" className="fab fa-x-twitter" target="_blank"rel="noopener noreferrer"> </a>
+                         <a href="https://github.com/abhishekbharti2" className="fab fa-github" target="_blank"rel="noopener noreferrer"> </a>
+                         <a href="https://www.linkedin.com/in/abhibhrt/" className="fab fa-linkedin" target="_blank"rel="noopener noreferrer"> </a>
+                         <i className='fas fa-heart' id='heart-btn' onClick={handleHeart}></i>
                     </div>
                 </div>
                 

@@ -45,7 +45,7 @@ export default function Footer() {
              rel="noopener noreferrer">
             <i className="fab fa-facebook-f"></i>
           </a>
-          <a href="https://www.linkedin.com/in/abhishek-bharti7843/" 
+          <a href="https://www.linkedin.com/in/abhibhrt" 
              className="social-icon linkedin"
              target="_blank"
              rel="noopener noreferrer">
@@ -57,7 +57,7 @@ export default function Footer() {
              rel="noopener noreferrer">
             <i className="fab fa-github"></i>
           </a>
-          <a href="https://x.com/AD_Jack9?t=9DGN-8JDwo4rVMXtPKXpUA&s=08" 
+          <a href="https://x.com/abhibhrt" 
              className="social-icon twitter"
              target="_blank"
              rel="noopener noreferrer">
