@@ -1,0 +1,391 @@
+/* Ejoyr Admin Styles - Fully Responsive */
+.ej-admin-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1rem;
+    padding-top: 5rem;
+    gap: 2rem;
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .ej-admin-header {
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    padding: 0 1rem;
+  }
+  
+  /* Loading State */
+  .ej-loading-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* Success Animation */
+  .ej-success-animation {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 110;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    top: 0;
+    left: 0;
+  }
+  
+  .ej-success-animation > h1 {
+    color: #72dc35;
+    margin: 20px;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    text-align: center;
+  }
+  
+  .ej-checkmark {
+    width: clamp(80px, 20vw, 100px);
+    height: clamp(80px, 20vw, 100px);
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #4bb71b;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4bb71b;
+    animation: ej-fill .4s ease-in-out .4s forwards, ej-scale .3s ease-in-out .9s both;
+    position: relative;
+    top: 5px;
+    right: 5px;
+    margin: 0 auto;
+  }
+  
+  .ej-checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #4bb71b;
+    fill: #fff;
+    animation: ej-stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+  
+  .ej-checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: ej-stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+  
+  @keyframes ej-stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes ej-scale {
+    0%, 100% {
+      transform: none;
+    }
+    50% {
+      transform: scale3d(1.1, 1.1, 1);
+    }
+  }
+  
+  @keyframes ej-fill {
+    100% {
+      box-shadow: inset 0px 0px 0px 30px #4bb71b;
+    }
+  }
+  
+  /* Main Content Layout */
+  .ej-admin-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+  }
+  
+  @media (min-width: 1024px) {
+    .ej-admin-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Form Styles */
+  .ej-admin-form-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    order: 2;
+  }
+  
+  @media (min-width: 1024px) {
+    .ej-admin-form-container {
+      order: 1;
+    }
+  }
+  
+  .ej-admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .ej-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .ej-form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+  
+  .ej-form-group input,
+  .ej-form-group textarea,
+  .ej-form-group select {
+    padding: 0.75rem;
+    border: 1px solid #8f8f8f;
+    border-radius: 4px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: all 0.2s;
+    background-color: white;
+    color: black;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .ej-form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .ej-form-group input:focus,
+  .ej-form-group textarea:focus,
+  .ej-form-group select:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
+  }
+  
+  .ej-form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .ej-form-row {
+      flex-direction: row;
+    }
+  }
+  
+  .ej-form-row .ej-form-group {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .ej-form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .ej-submit-btn,
+  .ej-cancel-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: all 0.2s;
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+  
+  .ej-submit-btn {
+    background-color: #4299e1;
+    color: white;
+  }
+  
+  .ej-submit-btn:hover {
+    background-color: #3182ce;
+  }
+  
+  .ej-cancel-btn {
+    background-color: #e2e8f0;
+    color: #4a5568;
+  }
+  
+  .ej-cancel-btn:hover {
+    background-color: #cbd5e0;
+  }
+  
+  /* Products List */
+  .ej-products-list {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    order: 1;
+  }
+  
+  @media (min-width: 1024px) {
+    .ej-products-list {
+      order: 2;
+    }
+  }
+  
+  .ej-products-list * {
+    color: rgb(76, 76, 76);
+  }
+  
+  .ej-products-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -1rem;
+    padding: 0 1rem;
+    width: calc(100% + 2rem);
+  }
+  
+  .ej-products-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+  
+  .ej-products-table th,
+  .ej-products-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+  }
+  
+  .ej-products-table th {
+    background-color: #f7fafc;
+    font-weight: 600;
+    color: #4a5568;
+    position: sticky;
+    top: 0;
+  }
+  
+  .ej-product-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .ej-actions-cell {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .ej-edit-btn,
+  .ej-delete-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: clamp(0.8rem, 2vw, 0.875rem);
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  
+  .ej-edit-btn {
+    background-color: #38a169;
+    color: white;
+  }
+  
+  .ej-edit-btn:hover {
+    background-color: #2f855a;
+  }
+  
+  .ej-delete-btn {
+    background-color: #e53e3e;
+    color: white;
+  }
+  
+  .ej-delete-btn:hover {
+    background-color: #c53030;
+  }
+  
+  /* Responsive Enhancements */
+  @media (max-width: 640px) {
+    .ej-admin-container {
+      padding-top: 4rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    
+    .ej-admin-form-container,
+    .ej-products-list {
+      padding: 1rem;
+    }
+    
+    .ej-products-table th,
+    .ej-products-table td {
+      padding: 0.5rem;
+    }
+    
+    .ej-form-actions {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .ej-submit-btn,
+    .ej-cancel-btn {
+      width: 100%;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .ej-admin-container {
+      padding: 0;
+    }
+    
+    .ej-admin-header {
+      color: #000;
+    }
+    
+    .ej-admin-form-container {
+      display: none;
+    }
+    
+    .ej-products-list {
+      box-shadow: none;
+      padding: 0;
+    }
+    
+    .ej-products-table {
+      min-width: 100%;
+    }
+    
+    .ej-products-table th {
+      background-color: transparent !important;
+      color: #000 !important;
+    }
+    
+    .ej-actions-cell {
+      display: none;
+    }
+  }

@@ -1,51 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import '../stylesheets/AdminLogs.css';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../stylesheets/Admin.css';
 
-const ADMIN_PASSWORD = "Bharti%7843";
-
-const Logs = () => {
-    const [logs, setLogs] = useState([]);
+const Admin = () => {
     const [password, setPassword] = useState('');
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [error, setError] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const navigate = useNavigate();
+    const ADMIN_PASSWORD = 'admin';
 
     const handleLogin = (e) => {
         e.preventDefault();
         if (password === ADMIN_PASSWORD) {
             setIsAuthenticated(true);
             setError('');
-        } else { 
-            setError('Invalid password'); 
+        } else {
+            setError('Invalid password');
             setPassword('');
         }
     };
 
-    useEffect(() => {
-        if (isAuthenticated) {
-            const fetchLogs = async () => {
-                setIsLoading(true);
-                setError('');
-                try {
-                    const response = await fetch(`https://excel-backend-6wmf.onrender.com/logs`);
-                    
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    
-                    const data = await response.json();
-                    setLogs(data); 
-                } catch (err) {
-                    console.error('Fetch error:', err);
-                    setError(`Failed to fetch logs: ${err.message}`);
-                } finally {
-                    setIsLoading(false);
-                }
-            };
-            
-            fetchLogs();
-        }
-    }, [isAuthenticated]);
+    const handleWebsiteNavigation = (websitePath) => {
+        navigate(websitePath);
+    };
 
     if (!isAuthenticated) {
         return (
@@ -102,14 +79,9 @@ const Logs = () => {
             <header className="admin-header">
                 <div className="admin-header-content">
                     <h1>
-                        <i className="fas fa-clipboard-list"></i> Request Logs
+                        <i className="fas fa-tachometer-alt"></i> Admin Dashboard
                     </h1>
                     <div className="admin-actions">
-                        <button
-                            onClick={() => window.location.reload()}
-                            className="admin-refresh-button">
-                            <i className="fas fa-sync-alt"></i> Refresh Data
-                        </button>
                         <button
                             onClick={() => setIsAuthenticated(false)}
                             className="admin-logout-button">
@@ -120,89 +92,42 @@ const Logs = () => {
             </header>
 
             <main className="admin-main-content">
-                {isLoading ? (
-                    <div className="admin-loading-container">
-                        <div className="admin-loading-spinner"></div>
-                        <p>Loading logs...</p>
-                    </div>
-                ) : error ? (
-                    <div className="admin-error-container">
-                        <div className="admin-error-alert">
-                            <i className="fas fa-exclamation-triangle"></i>
-                            <div>
-                                <h3>Error Loading Logs</h3>
-                                <p>{error}</p>
-                                <button 
-                                    onClick={() => window.location.reload()} 
-                                    className="admin-retry-button">
-                                    <i className="fas fa-redo"></i> Try Again
-                                </button>
-                            </div>
+                <div className="admin-websites-grid">
+                    <div 
+                        className="admin-website-card"
+                        onClick={() => handleWebsiteNavigation('/admin/ejoyr')}>
+                        <div className="website-card-icon">
+                            <i className="fas fa-shopping-cart"></i>
                         </div>
+                        <h2>Ejoyr</h2>
+                        <p>Manage products</p>
                     </div>
-                ) : (
-                    <div className="admin-logs-container">
-                        {logs.length > 0 ? (
-                            <>
-                                <div className="admin-stats-bar">
-                                    <div className="stat-card">
-                                        <i className="fas fa-database"></i>
-                                        <div>
-                                            <span>Total Logs</span>
-                                            <strong>{logs.length}</strong>
-                                        </div>
-                                    </div>
-                                    <div className="stat-card">
-                                        <i className="fas fa-clock"></i>
-                                        <div>
-                                            <span>Last Updated</span>
-                                            <strong>{new Date().toLocaleTimeString()}</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div className="admin-table-container">
-                                    <table className="admin-logs-table">
-                                        <thead>
-                                            <tr>
-                                                <th><i className="fas fa-id-card"></i> System ID</th>
-                                                <th><i className="fas fa-network-wired"></i> IP Address</th>
-                                                <th><i className="fas fa-clock"></i> Timestamp</th>
-                                                <th><i className="fas fa-exchange-alt"></i> Requests</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {logs.map((log, index) => (
-                                                <tr key={index} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
-                                                    <td className="id-cell">
-                                                        <span className="truncate">{log.uniqueId}</span>
-                                                    </td>
-                                                    <td>{log.ip}</td>
-                                                    <td>{new Date(log.timestamp).toLocaleString()}</td>
-                                                    <td className="request-count">
-                                                        <span className="count-badge">{log.requestCount || 1}</span>
-                                                    </td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </>
-                        ) : (
-                            <div className="admin-no-logs">
-                                <i className="fas fa-inbox"></i>
-                                <p>No logs available</p>
-                            </div>
-                        )}
+                    <div 
+                        className="admin-website-card"
+                        onClick={() => handleWebsiteNavigation('https://website2.com/admin')} >
+                        <div className="website-card-icon">
+                            <i className="fas fa-rocket"></i>
+                        </div>
+                        <h2>VerseEx</h2>
+                        <p>Manage Missions & Celetial Objects</p>
                     </div>
-                )}
+                    <div 
+                        className="admin-website-card"
+                        onClick={() => handleWebsiteNavigation('/admin/excelformatter')} >
+                        <div className="website-card-icon">
+                            <i className="fas fa-users"></i>
+                        </div>
+                        <h2>Excel Formatter</h2>
+                        <p>View website statistics</p>
+                    </div>
+                </div>
             </main>
             
             <footer className="admin-footer">
-                <p>© {new Date().getFullYear()} Admin Dashboard | Secure Access Only</p>
+                <p>© {new Date().getFullYear()} Admin Portal | All Rights Reserved</p>
             </footer>
         </div>
     );
 };
 
-export default Logs;
+export default Admin;

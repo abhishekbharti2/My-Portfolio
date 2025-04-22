@@ -1,0 +1,270 @@
+/* Formatter Dashboard Styles */
+
+.formatter-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formatter-header h1 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.formatter-header i {
+    color: #3b82f6;
+}
+
+.formatter-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.formatter-refresh-button,
+.formatter-logout-button,
+.formatter-retry-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.formatter-refresh-button {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.formatter-refresh-button:hover {
+    background: #cbd5e1;
+}
+
+.formatter-logout-button {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.formatter-logout-button:hover {
+    background: #fecaca;
+}
+
+.formatter-retry-button {
+    background: #dbeafe;
+    color: #1d4ed8;
+    margin-top: 0.75rem;
+}
+
+.formatter-retry-button:hover {
+    background: #bfdbfe;
+}
+
+.formatter-main-content {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+.formatter-loading-container,
+.formatter-error-container,
+.formatter-no-logs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.formatter-loading-spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 0.375rem solid #e2e8f0;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+.formatter-error-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #fee2e2;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid #fca5a5;
+    max-width: 600px;
+}
+
+.formatter-error-alert i {
+    color: #dc2626;
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+}
+
+.formatter-error-alert h3 {
+    color: #b91c1c;
+    margin: 0 0 0.5rem 0;
+}
+
+.formatter-error-alert p {
+    color: #7f1d1d;
+    margin: 0;
+}
+
+.formatter-no-logs i {
+    font-size: 2rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.formatter-no-logs p {
+    color: #64748b;
+    font-size: 1.125rem;
+}
+
+.formatter-stats-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: #f8fafc;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #e2e8f0;
+    flex: 1;
+}
+
+.stat-card i {
+    font-size: 1.5rem;
+    color: #3b82f6;
+}
+
+.stat-card div {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-card span {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.stat-card strong {
+    color: #1e293b;
+    font-size: 1.25rem;
+}
+
+.formatter-table-container {
+    overflow-x: auto;
+}
+
+.formatter-logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+}
+
+.formatter-logs-table th {
+    background: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.formatter-logs-table th i {
+    color: #64748b;
+    margin-right: 0.5rem;
+}
+
+.formatter-logs-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+.even-row {
+    background: #f8fafc;
+}
+
+.odd-row {
+    background: #fff;
+}
+
+.id-cell {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.request-count {
+    text-align: center;
+}
+
+.count-badge {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.formatter-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #64748b;
+    font-size: 0.875rem;
+    padding: 1rem 0;
+}
+
+/* Animations */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    .formatter-actions {
+        width: max-content;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    .formatter-stats-bar {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .formatter-main-content {
+        padding: 1rem;
+    }
+
+    .formatter-logs-table th,
+    .formatter-logs-table td {
+        padding: 0.5rem;
+    }
+}
